@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/jquery.fullPage.css">
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+<script src="js/jquery.fullPage.js"></script>
+<script src="js/waypoint.js"></script>
+
+
+</head>
+
+
+<body>
+  <div id="mypage">
+    <div class="section" id="pageone">
+            <div class="face">
+            <p class="faceh">猴啊家教</p>
+            <p class="facet">只 做 高 端 家 教</p>
+          </div>
+        </div>
+
+      <div class="section" id="pagetwo">
+        <div class="intro">
+          <p class="headt">最高质量的教师</p>
+          <p class="maint">平台教师100%为浙大学生，全杭州最优质的家教资源都在这里。</p>
+
+        </div>
+        <img class="ele up" src="css/m/02/up.svg">
+        <img class="ele down" src="css/m/02/down.svg">
+          
+      </div>
+
+      <div class="section" id="pagethree">
+          <div class="intro">
+          <p class="headt">评价与跟踪</p>
+          <p class="maint">我们对所有订单进行跟踪，并请双方互评。个人体验全透明。</p>
+        </div>
+        <img class="ele down" src="css/m/03/computer03.svg">
+      </div>
+
+      <div class="section" id="pagefour">
+          <div class="intro">
+          <p class="headt">最高的收益</p>
+          <p class="maint">根据您的偏好，用最先进的算法，为您推荐最合适您的选择。</p>
+        </div>
+        <img class="ele down" src="css/m/04/mountain04.svg">
+
+      </div>
+
+      <div class="section" id="pagefive">
+          <div class="intro">
+          <p class="headt">大数据个性化定制</p>
+          <p class="maint">平台教师100%为浙大学生，全杭州最优质的家教资源都在这里。</p>
+        </div>
+        <img class="ele down" src="css/m/05/pattern05.svg">
+      </div>
+
+      <div class="section" id="pagesix">
+          <div class="intro">
+          <p class="headt">交易信任保证</p>
+          <p class="maint">预收一定押金，当对方违约时，用户可获全额赔偿，从此不再被鸽。</p>
+        </div>
+        <img class="ele mid" src="css/m/06/pattern06.svg">
+      </div>
+
+      
+
+  </div>
+
+<script type="text/javascript">
+// 单页应用
+  $(function(){
+    $('#mypage').fullpage();
+});
+
+  $(document).ready(function(){
+  $(".ele").scroll(function() {
+    $(".ele").fadeOut();
+  });
+});
+
+
+</script>
+</body>
+
+
+</html>
+
+
