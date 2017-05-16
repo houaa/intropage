@@ -17,10 +17,15 @@
 <body>
   <div id="mypage">
     <div class="section" id="pageone">
-            <div class="face">
+          <div class="face">
             <p class="faceh">猴啊家教</p>
             <p class="facet">只 做 高 端 家 教</p>
+            <div class="free"><span style="color:white">限时</span><span style="color:#4DAC78">¥0</span></div>
           </div>
+          <img class="p1 ele down mt1" src="css/m/01/mountain01-1.svg">
+          <img class="p1 ele down mt2" src="css/m/01/mountain01-2.svg">
+          <img class="p1 ele down t1" src="css/m/01/tree01-1.svg">
+          <img class="p1 ele down sun" src="css/m/01/sun.svg">
         </div>
 
       <div class="section" id="pagetwo">
@@ -29,8 +34,8 @@
           <p class="maint">平台教师100%为浙大学生，全杭州最优质的家教资源都在这里。</p>
 
         </div>
-        <img class="ele up" src="css/m/02/up.svg">
-        <img class="ele down" src="css/m/02/down.svg">
+        <img class="p2 ele up" src="css/m/02/up.svg">
+        <img class="p2 ele down" src="css/m/02/down.svg">
           
       </div>
 
@@ -39,7 +44,7 @@
           <p class="headt">评价与跟踪</p>
           <p class="maint">我们对所有订单进行跟踪，并请双方互评。个人体验全透明。</p>
         </div>
-        <img class="ele down" src="css/m/03/computer03.svg">
+        <img class="p3 ele down" src="css/m/03/computer03.svg">
       </div>
 
       <div class="section" id="pagefour">
@@ -47,7 +52,7 @@
           <p class="headt">最高的收益</p>
           <p class="maint">根据您的偏好，用最先进的算法，为您推荐最合适您的选择。</p>
         </div>
-        <img class="ele down" src="css/m/04/mountain04.svg">
+        <img class="p4 ele down" src="css/m/04/mountain04.svg">
 
       </div>
 
@@ -56,7 +61,7 @@
           <p class="headt">大数据个性化定制</p>
           <p class="maint">平台教师100%为浙大学生，全杭州最优质的家教资源都在这里。</p>
         </div>
-        <img class="ele down" src="css/m/05/pattern05.svg">
+        <img class="p5 ele down" src="css/m/05/pattern05.svg">
       </div>
 
       <div class="section" id="pagesix">
@@ -64,7 +69,7 @@
           <p class="headt">交易信任保证</p>
           <p class="maint">预收一定押金，当对方违约时，用户可获全额赔偿，从此不再被鸽。</p>
         </div>
-        <img class="ele mid" src="css/m/06/pattern06.svg">
+        <img class="p6 ele mid" src="css/m/06/pattern06.svg">
       </div>
 
       
@@ -73,16 +78,25 @@
 
 <script type="text/javascript">
 // 单页应用
-  $(function(){
-    $('#mypage').fullpage();
-});
 
-  $(document).ready(function(){
-  $(".ele").scroll(function() {
-    $(".ele").fadeOut();
-  });
-});
+$('#mypage').fullpage({
+  afterRender: function(){
+    $(".ele",).hide();
+    $(".p1",).show();
+  },
 
+  afterLoad: function(anchorLink, index){
+    var loadedSection = $(this);
+    $(".p"+index).fadeIn("normal");
+    console.log("load"+index);
+  },
+
+  onLeave: function(index, nextIndex, direction){
+    var leavingSection = $(this);
+    $(".p"+index).fadeOut("slow");
+    console.log(index+"to"+nextIndex);
+  }
+});
 
 </script>
 </body>

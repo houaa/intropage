@@ -68,8 +68,9 @@
 
 .faceh{
 	font-weight: light;
-	font-size: 50px;
+	font-size: 60px;
 	text-align: center;
+	margin:auto;
 	color: #fff;
 }
 
@@ -77,6 +78,13 @@
 	font-size: 25px;
 	text-align: center;
 	color: #fff;
+	font-weight:light;
+}
+
+.free{
+	margin-top:80px;
+	text-align:center;
+	font-size:35px;
 }
 
 
@@ -97,11 +105,20 @@
 	z-index: 1;
 }
 
+.face{
+	position:absolute;
+	top: 20%;
+	left: 40%; /*为什么无法居中*/
+	margin:0 auto;
+	align:center;
+	/*top:0px;*/
+	z-index: 1;
+}
+
+
 .ele{
   position:absolute;
   /*left:0px;*/
-
-  /*z-index:-1;*/
  }
 
 .down{
@@ -110,4 +127,23 @@
 
 .mid{
 	bottom:300px;
+}
+
+.up{
+	top:0px;
+}
+
+.mt2{
+	left:400px;
+	z-index:-1;
+}
+
+.t1{
+	height:45%;
+	left:10%;
+}
+
+.sun{
+	left:30%;
+	z-index:-2;
 }
