@@ -80,12 +80,15 @@
 $('#mypage').fullpage({
   afterRender: function(){
     $(".ele",).hide();
-    $(".p1",).show();
-    // $(".sun",).show();
+    $(".p1",).show()
+    // $(".sun",).css("bottom","-30%");
   },
 
   afterLoad: function(anchorLink, index){
     var loadedSection = $(this);
+    // if(index==1){
+    // // $(".sun",).css("bottom","-10%");
+    // // };
     $(".p"+index).fadeIn("normal");
     console.log("load"+index);
   },
