@@ -82,17 +82,18 @@
 
 .headt{
 	/*font-weight: bold;*/
-	font-size: 45px;
+	font-size: 60px;
 }
 
 .maint{
-	font-size: 20px;
+	font-size: 35px;
+	font-weight: 200;
 }
 
 .intro{
 	position:absolute;
 	top: 250px;
-	margin:300px 100px;
+	margin:100px 100px;
 	/*top:0px;*/
 	z-index: 1;
 }
