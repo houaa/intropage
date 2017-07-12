@@ -4,17 +4,19 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/jquery.fullPage.css">
 <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-default/index.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
 
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="https://unpkg.com/element-ui/lib/index.js"></script>
 <script src="js/jquery.fullPage.js"></script>
+<script src="js/bootstrap.min.js"></script>
 <script src="js/waypoint.js"></script>
 </head>
 
 
 <body>
   <div class="bar">  
-    <img src="img/favicon.ico"></img>
+    <div class="btn" style="background-color: #4DAC78;border-radius: 30px;color: #fff;font-size: 30px;font-weight: lighter;">立即预约</div>
   </div>  
   <div id="mypage">
     <div class="section" id="pageone">
@@ -22,7 +24,7 @@
             <p class="faceh">猴啊家教</p>
             <p class="facet">只 做 高 端 家 教</p>
             <div class="free"><span style="color:white">限 时 </span><span style="color:#4DAC78">¥0</span></div>
-            <div class="btn">
+            <div class="houabtn">
               立即预约
             </div>
           </div>
@@ -73,20 +75,17 @@
   </div>
 
 <script type="text/javascript">
-// 单页应用
 
+// 单页应用
 $('#mypage').fullpage({
   afterRender: function(){
     $(".ele",).hide();
-    $(".p1",).show()
+    $(".p1",).show();
     // $(".sun",).css("bottom","-30%");
   },
 
   afterLoad: function(anchorLink, index){
     var loadedSection = $(this);
-    // if(index==1){
-    // // $(".sun",).css("bottom","-10%");
-    // // };
     $(".p"+index).fadeIn("normal");
     console.log("load"+index);
   },
@@ -94,14 +93,11 @@ $('#mypage').fullpage({
   onLeave: function(index, nextIndex, direction){
     var leavingSection = $(this);
     $(".p"+index).fadeOut("slow");
+    if(index<nextIndex) $(".bar").show();
+    else $(".bar").hide();
     console.log(index+"to"+nextIndex);
   }
 });
-
 </script>
 </body>
-
-
 </html>
-
-

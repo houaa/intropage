@@ -1,5 +1,5 @@
 .ui-bar-f {
-	height: 90px;
+	/* height: 90px; */
 	padding: 10px 0px;
 	background-color: #4DAC78;
 	border-top: 30px solid #fff;
@@ -146,7 +146,7 @@
 	z-index:1;
 }
 
-.btn{
+.houabtn{
 	width: 30%;
 	margin-top: 40px;
 	padding: 20px 10px;
@@ -160,8 +160,9 @@
 }
 
 .bar{
-	padding:30px 20px;
-	position:fixed;
+	padding:30px 20px; 
+	position:fixed; 
 	z-index: 3;
-	/*display: none;*/
+	display: none;
+	text-align: right;
 }
