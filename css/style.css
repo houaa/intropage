@@ -161,5 +161,7 @@
 
 .bar{
 	padding:30px 20px;
-	display: none;
+	position:fixed;
+	z-index: 3;
+	/*display: none;*/
 }
