@@ -165,3 +165,45 @@
 	z-index: 3;
 	display: none;
 }
+
+#pageseven{
+	background-color:#fafafa;
+}
+
+.final{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+input{
+	margin: 12px 0;
+	padding:20px 30px;
+	height: 60px;
+	width: 600px;
+	font-size: 25px;
+	border:1px solid #4DAC78;
+}
+
+textarea{
+	height: 250px;
+	width: 600px;
+	margin: 12px 0;
+	padding:20px 30px;
+	font-size: 25px;
+	border:1px solid #4DAC78;
+}
+
+.postbtn{
+	width: 15%;
+	margin-top: 40px;
+	padding: 20px 10px;
+	text-align: center;
+	background-color: #4DAC78;
+	border-radius: 30px;
+	color: #fff;
+	font-size: 30px;
+	font-weight: lighter;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif /*{global-font-family}*/;
+}
