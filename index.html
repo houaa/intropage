@@ -7,7 +7,6 @@
 <link rel="stylesheet" href="css/style.css">
 
 <script src="js/jquery-3.2.1.min.js"></script>
-<script src="https://unpkg.com/element-ui/lib/index.js"></script>
 <script src="js/jquery.fullPage.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/waypoint.js"></script>
@@ -76,19 +75,23 @@
       </div>
 
       <div class="section" id="pageseven">
-        <div class="final">
+        <div id="final">
           <h1 style="color: #4DAC78;margin-bottom: 40px;font-size: 60px;">联 系 我 们</h1>
-          <form>
+          <form id="contact" method="post">
             <input type="text" name="name" placeholder="姓 名"><br>
             <input type="text" name="contact" placeholder="联 系 方 式 （ 选 填 ）"><br>
             <input type="text" name="email" placeholder="邮 箱"><br>
             <textarea type="text" name="thoughts" placeholder="想 对 我 们 说 的 话"></textarea>
           </form>
-          <div class="postbtn">
+          <div class="postbtn" onclick="formSubmit();" id="final">
                 提交
           </div>
+              <div id="postdone">
+                <p>已成功提交 :)</p>
+              </div>
         </div> 
       </div>
+
   </div>
 
 <script type="text/javascript">
@@ -98,15 +101,18 @@ $('#mypage').fullpage({
   afterRender: function(){
     $(".ele",).hide();
     $(".p1",).show();
+    $("#postdone",).hide();
     // $(".sun",).css("bottom","-30%");
   },
 
+// 加载素材
   afterLoad: function(anchorLink, index){
     var loadedSection = $(this);
     $(".p"+index).fadeIn("normal");
     console.log("load"+index);
   },
 
+// 淡出素材
   onLeave: function(index, nextIndex, direction){
     var leavingSection = $(this);
     $(".p"+index).fadeOut("slow");
@@ -115,6 +121,12 @@ $('#mypage').fullpage({
     console.log(index+"to"+nextIndex);
   }
 });
+
+function formSubmit(){
+  // document.getElementById("contact").submit();
+  $("#postdone").fadeIn("normal");
+  $("#postdone").fadeOut(5000);
+}
 </script>
 </body>
 </html>
