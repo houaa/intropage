@@ -63,6 +63,10 @@
       </div>
     </div>
 
+    <div class="section" id="pageone">
+      <img src="" alt="">
+    </div>
+
   </div>
   <script type="text/javascript">
     // 单页应用
@@ -93,8 +97,26 @@
 
     function formSubmit() {
       // document.getElementById("contact").submit();
-      $("#postdone").fadeIn("normal");
-      $("#postdone").fadeOut(5000);
+      fetch('https://api.houaa.xyz/help/feedback/create/', {
+        method: 'POST',
+        body: JSON.stringify({
+          name: document.querySelector('input[name="name"]').value,
+          email: document.querySelector('input[name="email"]').value,
+          content: document.querySelector('textarea[name="thoughts"]').value,
+          phone: document.querySelector('input[name="contact"]').value
+        })
+      }).then(raw => raw.json())
+      .then(json => {
+        if (json.status === 'error') {
+          alert('提交出错')
+        } else {
+          $("#postdone").fadeIn("normal");
+          $("#postdone").fadeOut(5000);
+        }
+      }).catch(err => {
+        console.log(err)
+        alert('提交出错')
+      })
     }
   </script>
 </body>
