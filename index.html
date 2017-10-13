@@ -77,7 +77,7 @@
         <h3>APP - iOS版</h3>
         <img src="./img/apple.svg" alt="">
       </div>
-      <div class="content wechat">
+      <div class="content wechat" onclick="show('wechat')">
         <div class="introCode">
           扫描以下二维码<br>
           或微信搜索<span>"猴啊家教"</span><br>
@@ -88,7 +88,7 @@
         </div>
       </div>
 
-      <div class="content android">
+      <div class="content android"  onclick="show('android')">
         <div class="jump">
           正在下载<span>”猴啊家教“</span> for Android :)
         </div>
@@ -102,7 +102,7 @@
         </div>
       </div>
 
-      <div class="content ios">
+      <div class="content ios"  onclick="show('ios')">
         <div class="jump">
           正在跳转至<span>”猴啊家教“</span> for iOS :)
         </div>
@@ -169,11 +169,7 @@
     }
     function show(sec) {
       const pageight = document.getElementById('pageight')
-      pageight.classList.add(sec)
-
-      setTimeout(function() {
-        pageight.onclick = hide.bind(this, sec)
-      }, 0);
+      pageight.classList.toggle(sec)
 
       if (sec === 'android') {
         setTimeout(() => {
@@ -189,9 +185,7 @@
     function hide(sec) {
       const pageight = document.getElementById('pageight')
       pageight.classList.remove(sec)
-      setTimeout(function () {
-        pageight.onclick = show.bind(this, sec)
-      }, 0)
+      pageight.onclick = show.bind(this, sec)
     }
   </script>
 </body>
