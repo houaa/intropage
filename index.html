@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="css/jquery.fullPage.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=20">
   <script>
     mobileCheck = function () {
       var check = false;
@@ -115,7 +115,6 @@
         </div>
       </div>
     </div>
-    <a href="http://houaa-apk.oss-cn-shanghai.aliyuncs.com/houaa0.2.0.apk" download id="androidlink"></a>
   </div>
   <script type="text/javascript">
     // 单页应用
@@ -173,9 +172,8 @@
 
       if (sec === 'android') {
         setTimeout(() => {
-          const androidlink = document.getElementById('androidlink')
-          androidlink.click()
-        }, 0)
+          location.href = "http://houaa-apk.oss-cn-shanghai.aliyuncs.com/houaa0.2.0.apk"
+        }, 1500)
       } else if (sec === 'ios') {
         setTimeout(() => {
           location.href = "https://itunes.apple.com/cn/app/%E7%8C%B4%E5%95%8A%E5%AE%B6%E6%95%99/id1277691789"
