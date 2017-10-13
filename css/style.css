@@ -214,3 +214,95 @@ textarea{
     font-size: 25px;
     margin-top: 20px;
 }
+
+#pageight > .fp-tableCell {
+	display: flex;
+	flex-direction: column;
+}
+
+.section > div > .content {
+	display: none;
+	flex-grow: 4;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.section > div > .content > div.introCode {
+	font-size: 35px;
+	line-height: 100px;
+	text-align: center;
+}
+
+.section > div > .content > div.introCode > span {
+	color: #00ae74;
+	font-weight: 600;
+}
+
+.section > div > .content > div.code > img {
+	width: 300px;
+}
+
+.sec {
+	display: flex;
+	flex-grow: 1;
+	align-items: center;
+	border-bottom: 3px #377c64 solid;
+	margin-left: 80px;
+	margin-right: 80px;
+	justify-content: space-around;
+}
+
+.sec > h3 {
+	font-size: 47px;
+	font-weight: 600;
+}
+
+.sec:last-child {
+	border-bottom: none;
+}
+
+.section.wechat > div > * {
+	display: none;
+}
+
+.section.wechat > div > div#wechat {
+	display: flex;
+}
+
+.section.wechat > div > div.content.wechat {
+	display: flex;
+}
+
+.section.android > div > * {
+	display: none;
+}
+
+.section.android > div > div#android {
+	display: flex;
+}
+
+.section.android > div > div.content.android {
+	display: flex;
+}
+
+.section.ios > div > * {
+	display: none;
+}
+
+.section.ios > div > div#ios {
+	display: flex;
+}
+
+.section.ios > div > div.content.ios {
+	display: flex;
+}
+
+#pageight > div > div.content > div.jump {
+	font-size: 40px;
+	font-weight: 600;
+}
+
+#pageight > div > div.content > div.jump > span {
+	color: #00ae74;
+}

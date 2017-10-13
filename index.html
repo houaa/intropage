@@ -63,10 +63,59 @@
       </div>
     </div>
 
-    <div class="section" id="pageone">
-      <img src="" alt="">
-    </div>
+    <div id="pageight" class="section" style="background: #fafafa">
+      <div id="wechat" class="sec" onclick="show('wechat')">
+        <h3>微信公众平台</h3>
+        <img src="./img/houaa.png" alt="">
+      </div>
+      <div id="android" class="sec" onclick="show('android')">
+        <h3>APP - 安卓版</h3>
+        <img src="./img/android.svg" alt="">
+      </div>
+      <div id="ios" class="sec" onclick="show('ios')">
+        <h3>APP - iOS版</h3>
+        <img src="./img/apple.svg" alt="">
+      </div>
+      <div class="content wechat">
+        <div class="introCode">
+          扫描以下二维码<br>
+          或微信搜索<span>"猴啊家教"</span><br>
+          了解使用方法，联系我们
+        </div>
+        <div class="code">
+          <img src="./img/wechat.jpg" alt="">
+        </div>
+      </div>
 
+      <div class="content android">
+        <div class="jump">
+          正在下载<span>”猴啊家教“</span> for Android :)
+        </div>
+        <div class="introCode">
+          扫描以下二维码<br>
+          或微信搜索<span>"猴啊家教"</span><br>
+          了解使用方法，联系我们
+        </div>
+        <div class="code">
+          <img src="./img/wechat.jpg" alt="">
+        </div>
+      </div>
+
+      <div class="content ios">
+        <div class="jump">
+          正在跳转至<span>”猴啊家教“</span> for iOS :)
+        </div>
+        <div class="introCode">
+          扫描以下二维码<br>
+          或微信搜索<span>"猴啊家教"</span><br>
+          了解使用方法，联系我们
+        </div>
+        <div class="code">
+          <img src="./img/wechat.jpg" alt="">
+        </div>
+      </div>
+    </div>
+    <a href="http://houaa-apk.oss-cn-shanghai.aliyuncs.com/houaa0.2.0.apk" download id="androidlink"></a>
   </div>
   <script type="text/javascript">
     // 单页应用
@@ -117,6 +166,21 @@
         console.log(err)
         alert('提交出错')
       })
+    }
+    function show(sec) {
+      const pageight = document.getElementById('pageight')
+      pageight.classList.add(sec)
+
+      if (sec === 'android') {
+        setTimeout(() => {
+          const androidlink = document.getElementById('androidlink')
+          androidlink.click()
+        }, 0)
+      } else if (sec === 'ios') {
+        setTimeout(() => {
+          location.href = "https://itunes.apple.com/cn/app/%E7%8C%B4%E5%95%8A%E5%AE%B6%E6%95%99/id1277691789"
+        }, 1500)
+      }
     }
   </script>
 </body>
